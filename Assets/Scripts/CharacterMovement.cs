@@ -19,7 +19,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
 
-        rotateSpeed = 0.075f;
+        rotateSpeed = 0.8f;
         maxDistance = Mathf.Infinity;
         navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
 
@@ -59,15 +59,23 @@ public class CharacterMovement : MonoBehaviour
 
             transform.eulerAngles = new Vector3(0, rotationY, 0);
 
+            /*Mathf.SmoothDampAngle()
+
+            1: current - Objects current posistion
+            2: target - The posistion we are trying to reach
+            3: currentVelocity - 
+            4: smoothTime - Decides the speed it ill take to reach targeted posistion
+            */
+
         }
 
     }
 
-    //public void RotateCharacter()
-    //{
+    public void RotateCharacter()
+    {
 
 
 
-    //}
+    }
 
 }
